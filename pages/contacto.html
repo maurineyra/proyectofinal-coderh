@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacto</title>
+	<!-- ==================== CSS ==================== -->
+	<link rel="stylesheet" href="../assets/css/estilo.css">
+	<!-- ==================== GOOGLE FONTS ==================== -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@400;500&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<!-- ==================== HEADER ==================== -->
+	<header>
+		<!-- ==================== BARRA DE NAVEGACION ==================== -->
+		<div class="cont-brand">
+			<a class="navbar-brand" href="#home">
+				<img id="brand-img" src="../assets/img/itsolucioneslogo.png" alt="brand logo">
+			</a>
+		</div>
+		<nav class="navbar">
+			<div class="navbar-collapse" id="navbar-conten">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a href="./nosotros.html" class="nav-link">Nosotros</a>
+					</li>
+					<li class="nav-item">
+						<a href="./servicios.html" class="nav-link">Servicios</a>
+					</li>
+					<li class="nav-item">
+						<a href="./clientes.html" class="nav-link">Clientes</a>
+					</li>
+					<li class="nav-item">
+						<a href="./contacto.html" class="nav-link">Contacto</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- ==================== FORM ==================== -->
+	<main>
+		<section>
+			<div class="cont-form">
+				<div class="form">
+					<h2>Contactanos</h2>
+					<form action="#">
+						<label for="nombre">Nombre:</label>
+						<input type="text" id="nombre" name="nombre" required>
+
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required>
+
+						<label for="asunto">Mensaje</label>
+						<textarea id="asunto" name="asunto" placeholder="Dejanos tu consulta!"></textarea>
+
+						<input type="submit" value="Enviar">
+					</form>
+				</div>
+
+				<div class="map">
+					<h2 class="txt-map">Estamos ubicados en:</h2>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13167.795730640104!2d-58.6684776!3d-34.4026439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca141d4279f95%3A0xe04c023895a15ca2!2sNordelta%2C%20Benavidez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1675903828451!5m2!1ses!2sar"
+						allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- ==================== FOOTER ==================== -->
+	<footer class="footergbl">
+		<p>Mauricio Neyra</p>
+		<p>Footer de prueba</p>
+
+
+	</footer>
+</body>
+
+</html>
