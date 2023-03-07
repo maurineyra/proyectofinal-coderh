@@ -1,3 +1,41 @@
+:root {
+  /* colores */
+  --alt-color: rgb(0, 57, 114);
+  --subtitle-color: rgba(10, 10, 10, 0.904);
+  --text-color: rgb(67, 122, 241);
+  --primary-color-lighter: rgba(90, 152, 245, 0.233);
+  --primary-hover-color: rgb(32, 121, 255);
+  --primary-color: rgba(32, 121, 255, 0.8);
+  /* tamaño fuentes */
+  --big-titles: 3.4rem;
+  --normal-titles: 2.125rem;
+  --small-titles: 1.625rem;
+
+  --big-subtitles: 1.97rem;
+  --normal-subtitles: 1.735rem;
+  --small-subtitles: 1.485rem;
+
+  --normal-font-size: 1.11rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: 0.868rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-titles: 4.4rem;
+    --normal-titles: 2.375rem;
+    --small-titles: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --big-titles: 5.91rem;
+    --normal-titles: 3.4rem;
+    --small-titles: 2.59rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,82 +47,54 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: rgb(255, 255, 255);
-  position: relative;
-  padding-bottom: 54px;
-  padding-top: 60px;
 }
 
 /** ------------------- ESTILOS PARA TODAS LAS PAGES ------------------- **/
 
 /* ==================== BARRA DE NAVEGACION ==================== */
 
-header {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  background: rgb(255, 255, 255);
+.custom-nb {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.055);
 }
 
-/* -- usando flex --
 .navbar-brand {
   height: 60px;
-  cursor: pointer;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-*/
-.cont-brand {
-  padding-left: 20px;
-}
-
-.navbar-brand {
-  height: 60px;
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 0px;
 }
 
 #brand-img {
   height: 40px;
 }
 
-.navbar {
-  height: 60px;
-  padding-right: 20px;
-  overflow: hidden;
+.navbar-toggler {
+  border: 0px;
 }
 
-/* -- usando flex --
-.navbar-nav {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-*/
-
-/* -- con inline-block -- */
-.nav-item {
-  list-style-type: none;
-  display: inline-block;
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
-.nav-link {
+.navbar-toggler:hover {
+  color: var(--primary-hover-color);
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0px 1rem;
+  }
+}
+
+.custom-navlink {
   color: black;
   line-height: 60px;
-  display: inline-block;
-  text-decoration: none;
-  padding: 0 1rem;
+  padding: 0;
   letter-spacing: 0.05rem;
-  white-space: normal;
 }
 
-.nav-link:hover {
+.custom-navlink:hover {
   color: rgb(255, 255, 255);
-  background: rgb(6, 114, 186);
+  background-color: var(--primary-color)
 }
 
 /* ==================== FOOTER ==================== */
@@ -95,54 +105,176 @@ header {
   background-color: rgba(40, 114, 226, 0.575);
   font-size: 18px;
   width: 100%;
-  position: absolute;
   bottom: 0;
-
 }
 
-
-/* +++++++++++++++ INDEX.HTML +++++++++++++++ */
+/** +++++++++++++++ INDEX.HTML +++++++++++++++ **/
 
 /* ==================== INICIO ==================== */
 
 .home-image {
-  background-image: url(https://cutewallpaper.org/cdn-cgi/mirage/2af0adefb1b7ebf6af3b94bf8b86378693ec8b55d34af727ac0cbb58dfd044f5/1280/22/adobe-wallpapers/8-flat-background-designs-fluid-3d-vector-editable-adobe-xd-file-+-jpeg-+-png-flat-background-background-design-adobe-xd.png);
-  height: 60vh;
-  padding-top: 120px;
-  padding-left: 40px;
+  background-image: url(../img/backgroundweb.png);
+  display: flex;
+  flex-direction: column;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0px 0px 60px;
+  width: 100%;
+}
+
+.cont-home {
+  padding-top: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+}
+
+@media screen and (min-width: 458px) {
+  .cont-home {
+    padding-top: 160px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
 }
 
 .home-text {
-  color: rgba(255, 255, 255, 0.877);
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.815);
+  /* text-shadow: 2px 2px 5px var(--text-color-lighter); */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  margin: 0;
+  width: 100%;
+  /* align-items: center; */
 }
 
-.home-boton {
-  display: inline-block;
-  padding: 12px 15px;
-  margin: 20px 5px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.521);
-  cursor: pointer;
-  border-radius: 25px;
+.bloq-hbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pos-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -15px 0px;
+}
+
+.cont-hbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px auto;
+  justify-content: center;
+}
+
+.div-button {
+  width: 180px;
+  margin: 15px;
+
+}
+
+.home-button {
+  width: 100%;
+  padding: 0 40px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 500;
+  color: var(--alt-color);
+  border-radius: 10px;
   text-decoration: none;
   text-shadow: none;
-  font-size: 0.9rem;
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  display: block;
+  box-shadow: 0px 2px 6px 0px rgba(32, 32, 32, 0.733);
+  background: linear-gradient(-180deg, rgb(230, 230, 255) 0%, rgb(211, 211, 255) 96%);
 }
 
 
-.home-boton:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 78, 151);
+.home-button:hover {
+  background: var(--primary-hover-color);
+  color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
 }
 
-#titulo-home {
-  font-size: 40px;
-  padding: 15px 0px;
+#title-home {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: var(--normal-titles);
+  font-weight: 700;
+}
+
+#subtitle-home {
+  width: 100%;
+  color: var(--alt-color);
+  font-size: var(--small-subtitles);
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+.bloq-pcimg {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+}
+
+.cont-pcimg {
+  padding: 10px 11% 80px;
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+
+}
+
+@media screen and (min-width: 458px) {
+  .cont-pcimg {
+    padding: 12px 11% 100px;
+  }
+}
+
+@media screen and (min-width: 668px) {
+  .cont-pcimg {
+    margin-top: 40px;
+    padding: 15px 10% 160px;
+  }
+}
+
+.pcimg {
+  background-image: url(../img/notebook-light-2.png);
+  background-repeat: no-repeat;
+  filter: brightness(0.97);
+  background-size: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.cont-bgpcimg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 62.25%;
+  overflow: hidden;
+}
+
+.bg-pcimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .descrip {
@@ -153,18 +285,101 @@ header {
   margin: 20px 0px;
 }
 
-#bannertest {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 250px;
-  padding: 13px 0;
-  object-fit: cover;
-  width: 70%;
+.bloq-intro {
+  padding: 60px 0px;
 }
 
+.cont-intro {
+  width: 100%;
+  color: var(--alt-color);
+  text-align: center;
+  margin: 0px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
 
-/* +++++++++++++++ CONTACTO.HTML +++++++++++++++ */
+.h2-intro {
+  margin: 0px;
+  font-size: var(--small-subtitles);
+  font-weight: 600;
+}
+
+.p-intro {
+  margin: 20px auto 0px;
+  font-size: var(--small-font-size);
+}
+
+.bloq-stats {
+  padding: 60px 0px;
+  background: linear-gradient(10deg, rgba(58, 107, 255, 0.8) 0%, rgba(140, 158, 255, 0.8) 100%);
+}
+
+.cont-stats {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0px auto;
+  max-width: 1200px;
+}
+
+.pos-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -30px 0px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  width: 220px;
+  height: 100%;
+}
+
+.icons-stats {
+  user-select: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.cont-istats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--alt-color);
+}
+
+.p-stats {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  width: 100%;
+  margin-top: 20px;
+  font-size: var(--small-subtitles);
+}
+
+.h2-stats {
+  color: var(--alt-color);
+  font-size: var(--small-font-size);
+  width: 100%;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.linea-stats {
+  width: 24px;
+  height: 1px;
+  background-color: var(--alt-color);
+  margin-top: 20px;
+}
+
+/** +++++++++++++++ CONTACTO.HTML +++++++++++++++ **/
 
 /* ==================== FORM Y MAP ==================== */
 
