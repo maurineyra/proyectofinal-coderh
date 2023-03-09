@@ -18,6 +18,8 @@
   --normal-font-size: 1.11rem;
   --small-font-size: 1rem;
   --smaller-font-size: 0.868rem;
+
+  color-scheme: only light;
 }
 
 @media screen and (min-width: 768px) {
@@ -298,6 +300,7 @@ body {
     width: 100%;
   }
 }
+
 @media screen and (min-width: 992px) {
   .cont-home {
     padding-top: 160px 0px 0px;
@@ -590,7 +593,6 @@ body {
 }
 
 .icons-stats {
-  user-select: none;
   width: 60px;
   height: 60px;
   display: flex;
@@ -630,6 +632,33 @@ body {
   margin-top: 20px;
 }
 
+/** +++++++++++++++ NOSOTROS.HTML +++++++++++++++ **/
+
+/* ==================== NOSOTROS ==================== */
+
+.bloq-nosotros {
+  padding: 80px 0px;
+  width: 100%;
+}
+
+.cont-nosotros {
+  display: flex;
+  margin: 0px auto;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  word-break: break-word;
+  padding: 0px 20px;
+}
+
+.h1-nosotros {
+  color: lightgray;
+  text-align: center;
+  font-weight: 900;
+  font-size: var(--big-titles);
+}
+
 /** +++++++++++++++ SERVICIOS.HTML +++++++++++++++ **/
 
 /* ==================== SERVICIOS ==================== */
@@ -638,12 +667,12 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0px 0px 60px;
-  background: linear-gradient(rgba(82, 84, 147, 0.8), rgba(115, 116, 139, 0.8)), url(https://wallpaperaccess.com/full/1393237.jpg) center center / cover no-repeat;
+  background: linear-gradient(rgba(53, 153, 179, 0.8), rgba(103, 143, 170, 0.8)), url(https://wallpaperaccess.com/full/1393237.jpg) center center / cover no-repeat;
 }
 
 @media screen and (min-width: 458px) {
   .bloq-serv {
-    padding: 80px 0px;
+    padding: 0px 0px 80px;
   }
 }
 
@@ -656,6 +685,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0px auto;
+  width: 100%;
 }
 
 @media screen and (min-width: 458px) {
@@ -668,8 +698,18 @@ body {
 
 @media screen and (min-width: 992px) {
   .cont-serv {
-    padding: 0px;
+    padding-top: 170px;
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 1200px;
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cont-serv {
     max-width: 1400px;
+    width: 95%;
   }
 }
 
@@ -817,22 +857,18 @@ body {
 
 .card1 {
   grid-area: card1;
-
 }
 
 .card2 {
   grid-area: card2;
-
 }
 
 .card3 {
   grid-area: card3;
-
 }
 
 .card4 {
   grid-area: card4;
-
 }
 
 .card5e {
@@ -884,10 +920,40 @@ body {
   padding-top: 20px;
 }
 
+/** +++++++++++++++ CLIENTES.HTML +++++++++++++++ **/
+
+/* ==================== CLIENTES ==================== */
+
+.bloq-clientes {
+  padding: 80px 0px;
+  width: 100%;
+}
+
+.cont-clientes {
+  display: flex;
+  margin: 0px auto;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  word-break: break-word;
+  padding: 0px 20px;
+}
+
+.h1-clientes {
+  color: lightgray;
+  text-align: center;
+  font-weight: 900;
+  font-size: var(--big-titles);
+}
 
 /** +++++++++++++++ CONTACTO.HTML +++++++++++++++ **/
 
 /* ==================== FORM Y MAP ==================== */
+
+.bloq-contact {
+  padding: 80px 0px;
+}
 
 .cont-form {
   width: 80%;
@@ -895,27 +961,31 @@ body {
   margin: 0 auto;
   text-align: center;
   background-color: white;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 .form {
-  display: inline-block;
-  background-color: rgb(147, 187, 248);
   padding: 20px;
   border-radius: 10px;
   box-sizing: border-box;
-  width: 45%;
-  margin-top: 70px;
   margin-right: 5%;
 }
 
+.h2-contact {
+  color: var(--alt-color);
+}
 
-label,
-input[type="submit"] {
+label {
   display: block;
   margin-top: 20px;
-  color: rgb(0, 0, 0);
+  color: var(--primary-color);
   width: 100%;
+}
+
+.custom-input:focus {
+  border-color: var(--primary-color-dark);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(120, 9, 175, 0.2);
 }
 
 input[type="text"],
@@ -926,7 +996,7 @@ textarea {
   margin-top: 20px;
   box-sizing: border-box;
   color: black;
-  border: 1px solid rgb(0, 128, 255);
+  border: 1px solid var(--primary-color-dark);
   border-radius: 5px;
   resize: none;
 }
@@ -936,21 +1006,24 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: black;
+  background-color: var(--primary-color-dark);
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
+  margin-top: 20px;
+  width: 100%;
+
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 78, 151);
+  background-color: var(--primary-color);
+  color: var(--alt-color);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
 }
 
 .map {
   margin-left: 5%;
-  display: inline-block;
 }
 
 iframe {
@@ -958,8 +1031,10 @@ iframe {
   height: 500px;
   border: 1px solid rgba(0, 127, 247, 0.692);
   border-radius: 5px;
+
 }
 
 .txt-map {
   padding-bottom: 20px;
+  color: var(--alt-color);
 }
