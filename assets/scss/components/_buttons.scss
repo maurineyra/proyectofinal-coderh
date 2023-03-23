@@ -67,7 +67,7 @@
   }
 }
 
-// Boton alternativo
+// Boton secundario
 .altbtn {
   @extend .h-button;
   background: linear-gradient(-180deg, rgb(230, 230, 255) 0%, rgb(211, 211, 255) 96%);
@@ -77,5 +77,27 @@
     background: var(--primary-hover-color);
     color: var(--primary-color);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+  }
+}
+
+// Boton alternativo
+
+.bloq-cbut {
+  padding-top: 30px;
+}
+
+.cont-cbut {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.a-cbut {
+  @extend .h-button;
+  background: linear-gradient(-180deg, rgb(132, 103, 235) 0%, rgb(109, 36, 244) 96%);
+
+  &:hover {
+    background: linear-gradient(-180deg, rgba(152, 130, 231, 0.644) 0%, rgba(115, 51, 235, 0.568) 96%);
+    color: map-get($colors, primary-color);
   }
 }

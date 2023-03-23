@@ -192,29 +192,3 @@
     text-align: left;
   }
 }
-
-.bloq-cbut {
-  padding-top: 30px;
-}
-
-.cont-cbut {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.a-cbut {
-  border-radius: 10px;
-  white-space: nowrap;
-  color: rgb(255, 255, 255);
-  background-image: linear-gradient(-180deg, rgb(132, 103, 235) 0%, rgb(109, 36, 244) 96%);
-  box-shadow: none;
-  max-width: 300px;
-  padding: 0px 40px;
-  text-align: center;
-  height: 50px;
-  line-height: 50px;
-  font-weight: 500;
-  font-size: var(--smaller-font-size);
-  text-decoration: none;
-}
