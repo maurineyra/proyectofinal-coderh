@@ -1,0 +1,32 @@
+// Generador de breakpoints mobile-first usando @mixin y $maps
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+}
+// Max width md breakpoint
+@mixin breakp-md-max {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+// Geneador de contenedores sm, lg y xxl con @mixin, @if y @else
+@mixin cont-($value) {
+  @if cont-#{$value} == cont-sm {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @else if cont-#{$value} == cont-lg {
+    width: 90%;
+    padding: 0;
+    max-width: 1200px;
+  }
+
+  @else {
+    width: 95%;
+    max-width: 1400px;
+  }
+}

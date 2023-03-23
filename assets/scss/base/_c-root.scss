@@ -1,0 +1,42 @@
+:root {
+  color-scheme: only light;
+
+  /** Variables globales CSS **/
+
+  /// Variables globales generadas a CSS para personalizacion en tiempo real sin necesidad de recompilar con SASS.
+  /// Esto brinda un facil acceso a los valores mas usados como colores, tamaño de fuente, etc.
+
+  // Genero mis variables para CSS con el mapa $colors
+
+  /* colores */
+  @each $color,
+  $value in $colors {
+    --#{$color}: #{$value};
+  }
+
+  // Genero mis variables para CSS con el mapa $font-size, $fontize-md y $font-size-lg
+
+  /* tamaño fuentes */
+  @each $fontsize,
+  $value in $font-size {
+    --#{$fontsize}: #{$value};
+  }
+
+  //  Genero mis variables de tamaño de fuentes para CSS y le aplico Mediaqueries generadas con @mixin 
+  @include breakpoint (md) {
+
+    @each $fontsize,
+    $value in $font-size-md {
+      --#{$fontsize}: #{$value};
+    }
+  }
+
+  @include breakpoint (lg) {
+
+    @each $fontsize,
+    $value in $font-size-lg {
+      --#{$fontsize}: #{$value};
+    }
+  }
+
+}

@@ -1,0 +1,53 @@
+// Map breakpoints 
+$breakpoints: (
+  sm: 458px,
+  sm1: 668px,
+  md: 768px,
+  lg: 992px,
+  xl: 1100px,
+  xxl: 1440px
+);
+
+// Map Colores 
+$colors: (
+  primary-color: rgba(120, 9, 175),
+  primary-color-dark: rgb(82, 84, 147),
+  secondary-color: rgb(39, 66, 120),
+  alt-color: rgb(79, 197, 243),
+  primary-hover-color: rgba(85, 221, 255, 0.178)
+);
+
+// Map Tamaño de fuentes mobile, tablet, desktop
+$font-size: (
+  big-titles: 3.4rem,
+  normal-titles: 2.125rem,
+  small-titles: 1.625rem,
+
+  big-subtitles: 1.97rem,
+  normal-subtitles: 1.735rem,
+  small-subtitles: 1.485rem,
+
+  normal-font-size: 1.11rem,
+  small-font-size: 1rem,
+  smaller-font-size: 0.868rem
+);
+
+$font-size-md: (
+  big-titles: 4.4rem,
+  normal-titles: 2.375rem,
+  small-titles: 1.75rem,
+
+  big-subtitles: 2.07rem,
+  normal-subtitles: 1.935rem,
+  small-subtitles: 1.685rem,
+);
+
+$font-size-lg: (
+  big-titles: 5.91rem,
+  normal-titles: 3.4rem,
+  small-titles: 2.59rem,
+
+  big-subtitles: 2.27rem,
+  normal-subtitles: 2.035rem,
+  small-subtitles: 1.785rem
+);

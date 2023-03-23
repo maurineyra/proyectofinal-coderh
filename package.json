@@ -1,0 +1,13 @@
+{
+  "name": "proyecto-coderhouse-v2---mauricio-neyra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "sass --watch ./assets/scss/main.scss ./assets/css/estilo.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,52 @@
+/** ------------------- ESTILOS PARA TODAS LAS PAGES ------------------- **/
+
+/* ==================== BARRA DE NAVEGACION ==================== */
+
+.custom-nb {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.055);
+}
+
+.navbar-brand {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+#brand-img {
+  height: 40px;
+}
+
+.navbar-toggler {
+  border: 0px;
+  color: var(--primary-color-dark);
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.navbar-expand-lg {
+  .navbar-nav {
+    .nav-link {
+      @include breakpoint(lg) {
+        padding: 0px 1rem;
+      }
+    }
+  }
+}
+
+.custom-navlink {
+  color: black;
+  line-height: 60px;
+  padding: 0;
+  letter-spacing: 0.05rem;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+    background-color: var(--primary-color);
+  }
+}

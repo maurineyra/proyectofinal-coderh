@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros</title>
   <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <!-- ==================== BOOTSTRAP CSS ==================== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- ==================== AOS CSS ==================== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- ==================== CSS ==================== -->
   <link rel="stylesheet" href="../assets/css/estilo.css">
   <!-- ==================== GOOGLE FONTS ==================== -->
@@ -32,7 +34,7 @@
     <nav class="navbar navbar-expand-lg bg-white fixed-top p-0 custom-nb">
       <div class="container-fluid">
         <a class="navbar-brand me-0" href="../index.html">
-          <img id="brand-img" src="../assets/img/itsolucioneslogov3.png" alt="SM logo">
+          <img id="brand-img" src="../assets/img/itsolucioneslogov3.png" alt="Logo de la empresa SM">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +70,55 @@
     <section class="nosotros">
       <div class="bloq-nosotros">
         <div class="cont-nosotros">
-          <h1 class="h1-nosotros">EN CONSTRUCCION</h1>
+          <div class="contnos-txt">
+            <h1 class="h1-nos">Quienes somos?</h1>
+            <p class="p-nos">SM Solutions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="intro-us">
+      <div class="bloq-us">
+        <div class="cont-us" data-aos="fade-right" data-aos-duration="500" data-aos-offset="0">
+          <h2 class="h2-us">
+            Te contamos un poco de nosotros
+          </h2>
+          <p class="p-us">
+            Nuestra empresa IT se especializa en brindar una amplia gama de servicios de tecnología de la información,
+            que incluyen backup, mantenimiento, seguridad y redes. Nos enfocamos en la metodología ágil como nuestra
+            principal forma de trabajo, lo que significa que nos adaptamos a las necesidades y objetivos de nuestros
+            clientes de manera flexible y ágil.
+            En nuestra empresa, ponemos a nuestros clientes en el centro de nuestro enfoque y trabajamos de manera
+            responsable para cumplir con sus necesidades y expectativas. Nos enorgullece brindar un servicio excepcional
+            y mantener una comunicación constante con nuestros clientes para garantizar su satisfacción.
+          </p>
+        </div>
+        <div class="cont-us2" data-aos="fade-left" data-aos-duration="500" data-aos-delay="250" data-aos-offset="0">
+          <h2 class="h2-us">
+            En resumen..
+          </h2>
+          <p class="p-us">
+            En general, somos una organización comprometida y confiable que se enfoca en el cliente y utiliza la
+            metodología ágil para asegurarnos de que nuestros clientes reciban los servicios de tecnología de la
+            información que necesitan para tener éxito. En resumen, en nuestra empresa trabajamos juntos para brindar
+            servicios de alta calidad y centrados en el cliente en todo momento.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="get-in">
+      <div class="bloq-get">
+        <div class="cont-get">
+          <div class="get-txt">
+            <h1 class="h1-get">
+              Deja todo en nuestras manos, elegi de forma correcta!</h1>
+            <p class="p-get">
+              Trabaja con un equipo dedicado y profesional que te brindaria un servicio de alta calidad.</p>
+          </div>
+          <div class="bloq-cbut">
+            <div class="cont-cbut"><a class="a-cbut"
+                href="./contacto.html">Contactanos</a></div>
+          </div>
         </div>
       </div>
     </section>
@@ -79,7 +129,7 @@
       <div class="cont-footer">
         <div class="cont-foott">
           <div class="foot-links"><a class="link-f" href="../index.html">Inicio</a></div>
-          <div class="foot-links"><a class="link-f" href="./nosotros.html">Nosotros</a></div>
+          <div class="foot-links"><a class="link-f" href="#">Nosotros</a></div>
           <div class="foot-links"><a class="link-f" href="./servicios.html">Servicios</a></div>
           <div class="foot-links"><a class="link-f" href="./clientes.html">Clientes</a></div>
           <div class="foot-links"><a class="link-f" href="./contacto.html">Contacto</a></div>
@@ -97,7 +147,8 @@
             </div>
           </div>
           <div class="footer-content">
-            <div class="f-logo"> <img src="../assets/img/itsolucwhite.png" alt="Logo" class="logowhite"></div>
+            <div class="f-logo"> <img src="../assets/img/itsolucwhite.png" alt="Logo de la empresa SM"
+                class="logowhite"></div>
             <div class="contp-footer">
               <p class="p-foot">Mauricio Neyra 2023 &copy;</p>
             </div>
@@ -110,6 +161,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+  <!-- ==================== AOS JS ==================== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

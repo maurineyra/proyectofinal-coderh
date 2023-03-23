@@ -1,0 +1,22 @@
+// Abstract
+@import 'abstract/variables';
+@import 'abstract/animation';
+@import 'abstract/mixins';
+
+//Base
+@import 'base/c-root';
+@import 'base/reset';
+
+//Layout
+@import 'layout/nav';
+@import 'layout/footer';
+
+//Components
+@import 'components/buttons';
+
+//Pages
+@import 'pages/index';
+@import 'pages/nosotros';
+@import 'pages/servicios';
+@import 'pages/clientes';
+@import 'pages/contacto';

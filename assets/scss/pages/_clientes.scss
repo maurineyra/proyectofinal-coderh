@@ -1,0 +1,26 @@
+/** +++++++++++++++ CLIENTES.HTML +++++++++++++++ **/
+
+/* ==================== CLIENTES ==================== */
+
+.bloq-clientes {
+  padding: 80px 0px;
+  width: 100%;
+}
+
+.cont-clientes {
+  display: flex;
+  margin: 0px auto;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  word-break: break-word;
+  padding: 0px 20px;
+}
+
+.h1-clientes {
+  color: lightgray;
+  text-align: center;
+  font-weight: 900;
+  font-size: var(--big-titles);
+}

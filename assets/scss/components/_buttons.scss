@@ -1,0 +1,81 @@
+/* ==================== BUTTONS ==================== */
+/* HOME BUTTONS */
+
+.bloq-hbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(lg) {
+    margin-left: -15px;
+    justify-content: start;
+  }
+}
+
+.pos-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -15px 0px;
+}
+
+.cont-hbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px auto;
+  justify-content: center;
+
+  @include breakpoint(lg) {
+    justify-content: flex-start;
+  }
+
+  @include breakpoint(xl) {
+    flex-wrap: nowrap;
+  }
+}
+
+.div-button {
+  width: 180px;
+  margin: 15px;
+}
+
+/// No se realiza nesting para un acceso rapido por clase en caso de querer personalizar via CSS sin necesidad de usar SASS.
+
+// Boton primario
+.h-button {
+  width: 100%;
+  padding: 0 40px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  display: block;
+  box-shadow: 0px 2px 6px 0px rgba(32, 32, 32, 0.733);
+  background: var(--primary-color-dark);
+
+  &:hover {
+    background: var(--primary-color);
+    color: var(--alt-color);
+  }
+}
+
+// Boton alternativo
+.altbtn {
+  @extend .h-button;
+  background: linear-gradient(-180deg, rgb(230, 230, 255) 0%, rgb(211, 211, 255) 96%);
+  color: var(--primary-color);
+
+  &:hover {
+    background: var(--primary-hover-color);
+    color: var(--primary-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+  }
+}
