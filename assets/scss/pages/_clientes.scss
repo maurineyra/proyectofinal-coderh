@@ -6,7 +6,7 @@
   display: flex;
   overflow: hidden;
   background: linear-gradient(rgba(39, 66, 120, 0.795), rgba(76, 105, 124, 0.74)),
-    url('../img/backgroundweb.png') center center / cover no-repeat;
+    url("../img/backgroundweb.png") center center / cover no-repeat;
   padding: 60px 0px;
 
   @include breakpoint(sm) {
