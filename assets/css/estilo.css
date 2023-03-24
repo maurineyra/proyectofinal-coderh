@@ -387,7 +387,6 @@ body {
   }
 }
 .cont-home .home-text {
-  /* text-shadow: 2px 2px 5px var(--text-color-lighter); */
   display: flex;
   flex-direction: column;
   margin: 0;
