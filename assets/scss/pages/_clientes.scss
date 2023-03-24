@@ -6,8 +6,7 @@
   display: flex;
   flex-direction: column;
   padding: 0px 0px 60px;
-  background: linear-gradient(rgba(132, 35, 189, 0.8), rgba(145, 188, 216, 0.8)),
-    url(https://www.linguahouse.com/linguafiles/md5/6b6acce3839a53e18ebc44cfedda132d) center center / cover no-repeat;
+  background: linear-gradient(rgba(132, 35, 189, 0.8), rgba(145, 188, 216, 0.8)), url(https://www.linguahouse.com/linguafiles/md5/6b6acce3839a53e18ebc44cfedda132d) center center / cover no-repeat;
 
   @include breakpoint(sm) {
     padding: 0px 0px 80px;
@@ -56,7 +55,7 @@
   text-align: center;
 
   @include breakpoint(sm) {
-    border-width: 6px;
+    border-width: 7px;
     padding: 40px 40px 20px;
   }
 
