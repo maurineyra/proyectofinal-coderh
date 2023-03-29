@@ -180,18 +180,13 @@
 
 .cont-comment {
   @extend .cont-clientes;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
 
   @include breakpoint(sm) {
     @include cont-(sm);
-    flex-direction: row;
   }
 
   @include breakpoint(lg) {
     @include cont-(lg);
-    height: auto;
   }
 
   @include breakpoint(xxl) {
@@ -199,44 +194,90 @@
     max-width: 1600px;
   }
 
+}
+
+.cardcom-txt {
+  @extend .clientes-txt;
+
+  .h2-cardcom {
+    @extend .h2-clientes;
+    color: map-get($colors, primary-color);
+  }
+
+  .p-cardcom {
+    @extend .p-clientes;
+    color: map-get($colors, primary-color-dark);
+  }
+}
+
+.card-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: -20px auto 0px;
+  padding-top: 40px;
+  width: 100%;
+
+  @include breakpoint(lg) {
+    padding-top: 50px;
+  }
 
   .card-comment {
+    position: relative;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 100%;
-    height: 200px;
-    padding: 20px;
+    width: 100%;
+    min-width: 210px;
+    height: 210px;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(5px);
     transition: all .3s ease;
 
     &:hover {
-      transform: scale(1.125);
+      transform: scale(1.055);
     }
 
-    @include breakpoint(sm) {
-      max-width: 400px;
+    @include breakpoint(sm1) {
+      width: 47%;
+
+      &:hover {
+        transform: scale(1.125);
+      }
     }
 
-    @include breakpoint(md) {
-      max-width: 295px;
-    }
+    @include breakpoint(lg) {
 
-    @include breakpoint(xl) {
-      max-width: 320px;
+      max-width: 480px;
     }
 
     @include breakpoint(xxl) {
-      max-width: 420px;
+
+      max-width: 410px;
     }
 
-    .p-commentsmall {
-      font-size: map-get($font-size, smaller-font-size);
+    .card-filter {
+      backdrop-filter: blur(5px) saturate(180%);
+      min-width: 210px;
+      height: 210px;
+      border-radius: 20px;
+    }
+
+    .cont-cardtxt {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      padding: 20px;
+      height: 200px;
+
+      .p-commentsmall {
+        font-size: map-get($font-size, smaller-font-size);
+      }
     }
   }
 }

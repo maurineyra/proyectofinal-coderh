@@ -1173,13 +1173,13 @@ body {
   }
 }
 
-.clientes-txt {
+.clientes-txt, .cardcom-txt {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 0px;
 }
-.clientes-txt .h2-clientes {
+.clientes-txt .h2-clientes, .cardcom-txt .h2-clientes, .cardcom-txt .h2-cardcom {
   margin-bottom: 0px;
   font-weight: 700;
   font-size: 2.125rem;
@@ -1187,7 +1187,7 @@ body {
   text-align: center;
   width: 100%;
 }
-.clientes-txt .p-clientes {
+.clientes-txt .p-clientes, .cardcom-txt .p-clientes, .cardcom-txt .p-cardcom {
   word-break: break-word;
   margin: 0;
   padding: 0;
@@ -1235,16 +1235,10 @@ body {
   background: url("../img/backgroundwebv2.png") center center/cover no-repeat;
 }
 
-.cont-comment {
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
 @media screen and (min-width: 458px) {
   .cont-comment {
     padding-left: 40px;
     padding-right: 40px;
-    flex-direction: row;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1252,7 +1246,6 @@ body {
     width: 90%;
     padding: 0;
     max-width: 1200px;
-    height: auto;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1262,45 +1255,79 @@ body {
     max-width: 1600px;
   }
 }
-.cont-comment .card-comment {
+
+.cardcom-txt .h2-cardcom {
+  color: rgb(120, 9, 175);
+}
+.cardcom-txt .p-cardcom {
+  color: rgb(82, 84, 147);
+}
+
+.card-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: -20px auto 0px;
+  padding-top: 40px;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .card-wrap {
+    padding-top: 50px;
+  }
+}
+.card-wrap .card-comment {
+  position: relative;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 100%;
-  height: 200px;
-  padding: 20px;
+  width: 100%;
+  min-width: 210px;
+  height: 210px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.25);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
-.cont-comment .card-comment:hover {
-  transform: scale(1.125);
+.card-wrap .card-comment:hover {
+  transform: scale(1.055);
 }
-@media screen and (min-width: 458px) {
-  .cont-comment .card-comment {
-    max-width: 400px;
+@media screen and (min-width: 668px) {
+  .card-wrap .card-comment {
+    width: 47%;
+  }
+  .card-wrap .card-comment:hover {
+    transform: scale(1.125);
   }
 }
-@media screen and (min-width: 768px) {
-  .cont-comment .card-comment {
-    max-width: 295px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .cont-comment .card-comment {
-    max-width: 320px;
+@media screen and (min-width: 992px) {
+  .card-wrap .card-comment {
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .cont-comment .card-comment {
-    max-width: 420px;
+  .card-wrap .card-comment {
+    max-width: 410px;
   }
 }
-.cont-comment .card-comment .p-commentsmall {
+.card-wrap .card-comment .card-filter {
+  backdrop-filter: blur(5px) saturate(180%);
+  min-width: 210px;
+  height: 210px;
+  border-radius: 20px;
+}
+.card-wrap .card-comment .cont-cardtxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  padding: 20px;
+  height: 200px;
+}
+.card-wrap .card-comment .cont-cardtxt .p-commentsmall {
   font-size: 0.868rem;
 }
 
