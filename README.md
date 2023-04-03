@@ -1,7 +1,7 @@
 # Proyecto Final - Coderhouse
 ### Desarrollado por:  Mauricio Neyra 👋
 
-![image](https://i.ibb.co/MMNYf0N/smsolutions-index.png)
+[![image](https://i.ibb.co/MMNYf0N/smsolutions-index.png)](https://maurineyra.github.io/proyectofinal-coderh/)
 
 
 #### Construido con: 
