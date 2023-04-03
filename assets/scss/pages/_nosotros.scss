@@ -85,15 +85,55 @@
 }
 
 .cont-us {
-  width: 100%;
-  text-align: center;
   margin: 0px auto;
   padding-left: 20px;
   padding-right: 20px;
+  width: 100%;
+
+  @include breakpoint(sm) {
+    @include cont-(sm);
+  }
 
   @include breakpoint(lg) {
+    @include cont-(lg);
+  }
+
+  @include breakpoint(xxl) {
+    @include cont-(xxl);
+  }
+
+}
+
+.bloq-imgtxt2 {
+  padding-top: 40px
+}
+
+.cont-img1 {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  @include breakpoint(md) {
+    max-height: fit-content;
+  }
+}
+
+.cont-img2 {
+  @extend .cont-img1;
+}
+
+.cont-ustxt {
+  text-align: center;
+  margin: 0px auto;
+
+  @include breakpoint(md) {
+    padding-left: 30px;
+    max-width: 800px;
+  }
+
+  @include breakpoint(xxl) {
     padding: 0px;
-    max-width: 900px;
   }
 
   .h2-us {
@@ -110,9 +150,14 @@
   }
 }
 
-.cont-us2 {
-  padding-top: 40px;
-  @extend .cont-us
+.cont-ustxt2 {
+  @extend .cont-ustxt;
+
+  @include breakpoint(md) {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+
 }
 
 .bloq-get {
@@ -149,7 +194,6 @@
 
   @include breakpoint(xxl) {
     width: 95%;
-    max-width: 1100px;
   }
 }
 

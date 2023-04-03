@@ -41,6 +41,7 @@
       width: 100%;
       padding: 10px;
       color: white;
+
       &:hover {
         color: map-get($colors, alt-color);
       }
@@ -79,10 +80,11 @@
         color: var(--primary-color);
         background: linear-gradient(-180deg, rgb(230, 230, 255) 0%, rgb(211, 211, 255) 96%);
         border-radius: 10px;
-          &:hover {
-            background: linear-gradient(-180deg, rgb(132, 103, 235) 0%, rgb(109, 36, 244) 96%);
-            color: rgb(255, 255, 255);
-          }
+
+        &:hover {
+          background: linear-gradient(-180deg, rgb(132, 103, 235) 0%, rgb(109, 36, 244) 96%);
+          color: rgb(255, 255, 255);
+        }
       }
     }
   }

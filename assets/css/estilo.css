@@ -249,6 +249,7 @@ body {
   right: 20px;
   width: 50px;
   height: 50px;
+  z-index: 2000;
 }
 
 .envol-btt {
@@ -266,6 +267,7 @@ body {
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
 .customshow {
@@ -319,7 +321,7 @@ body {
   margin: 15px;
 }
 
-.h-button, .a-cbut, .altbtn {
+.h-button, .a-cbut, .a-cbut2, .altbtn {
   width: 100%;
   padding: 0 40px;
   height: 50px;
@@ -334,7 +336,7 @@ body {
   box-shadow: 0px 2px 6px 0px rgba(32, 32, 32, 0.733);
   background: var(--primary-color-dark);
 }
-.h-button:hover, .a-cbut:hover, .altbtn:hover {
+.h-button:hover, .a-cbut:hover, .a-cbut2:hover, .altbtn:hover {
   background: var(--primary-color);
   color: var(--alt-color);
 }
@@ -352,6 +354,11 @@ body {
 .bloq-cbut {
   padding-top: 30px;
 }
+@media screen and (min-width: 992px) {
+  .bloq-cbut {
+    padding-top: 0;
+  }
+}
 
 .cont-cbut {
   display: flex;
@@ -359,12 +366,20 @@ body {
   position: relative;
 }
 
-.a-cbut {
+.a-cbut, .a-cbut2 {
   background: linear-gradient(-180deg, rgb(132, 103, 235) 0%, rgb(109, 36, 244) 96%);
 }
-.a-cbut:hover {
+.a-cbut:hover, .a-cbut2:hover {
   background: linear-gradient(-180deg, rgba(152, 130, 231, 0.644) 0%, rgba(115, 51, 235, 0.568) 96%);
   color: rgb(120, 9, 175);
+}
+
+.bloq-infobut {
+  padding-bottom: 20px;
+}
+
+.a-cbut2:hover {
+  color: white;
 }
 
 /** +++++++++++++++ INDEX.HTML +++++++++++++++ **/
@@ -715,33 +730,81 @@ body {
   overflow: hidden;
 }
 
-.cont-us, .cont-us2 {
-  width: 100%;
-  text-align: center;
+.cont-us {
   margin: 0px auto;
   padding-left: 20px;
   padding-right: 20px;
+  width: 100%;
 }
-@media screen and (min-width: 992px) {
-  .cont-us, .cont-us2 {
-    padding: 0px;
-    max-width: 900px;
+@media screen and (min-width: 458px) {
+  .cont-us {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-.cont-us .h2-us, .cont-us2 .h2-us {
+@media screen and (min-width: 992px) {
+  .cont-us {
+    width: 90%;
+    padding: 0;
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .cont-us {
+    width: 95%;
+    max-width: 1400px;
+  }
+}
+
+.bloq-imgtxt2 {
+  padding-top: 40px;
+}
+
+.cont-img1, .cont-img2 {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .cont-img1, .cont-img2 {
+    max-height: fit-content;
+  }
+}
+
+.cont-ustxt, .cont-ustxt2 {
+  text-align: center;
+  margin: 0px auto;
+}
+@media screen and (min-width: 768px) {
+  .cont-ustxt, .cont-ustxt2 {
+    padding-left: 30px;
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .cont-ustxt, .cont-ustxt2 {
+    padding: 0px;
+  }
+}
+.cont-ustxt .h2-us, .cont-ustxt2 .h2-us {
   margin: 0px;
   font-size: var(--small-subtitles);
   color: rgb(79, 197, 243);
   font-weight: 600;
 }
-.cont-us .p-us, .cont-us2 .p-us {
+.cont-ustxt .p-us, .cont-ustxt2 .p-us {
   margin: 20px auto 0px;
   font-size: var(--small-font-size);
   color: rgb(82, 84, 147);
 }
 
-.cont-us2 {
-  padding-top: 40px;
+@media screen and (min-width: 768px) {
+  .cont-ustxt2 {
+    padding-left: 0;
+    padding-right: 30px;
+  }
 }
 
 .bloq-get {
@@ -785,7 +848,6 @@ body {
 @media screen and (min-width: 1440px) {
   .cont-get {
     width: 95%;
-    max-width: 1100px;
   }
 }
 
@@ -975,9 +1037,9 @@ body {
 
 .cards {
   display: grid;
-  grid-template-areas: "card1" "card2" "card3" "card4";
+  grid-template-areas: "card1" "card2" "card3" "card4" "card5";
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 210px;
   margin-top: -50px;
   padding-top: 40px;
   justify-content: center;
@@ -1035,17 +1097,30 @@ body {
 
 .card5e {
   height: 100%;
-  display: flex;
   grid-area: card5;
   background: linear-gradient(rgba(92, 66, 141, 0.8), rgba(94, 129, 148, 0.8)), url(https://i0.wp.com/personalit.us/wp-content/uploads/2021/02/People-Meeting-with-laptops-862x519-1-800x450.jpeg) center center/cover no-repeat;
   border-radius: 15px;
-  opacity: 0;
   animation: fadein 2s cubic-bezier(0.23, 1, 0.32, 1) 0.1s 1 forwards;
 }
-@media screen and (max-width: 767px) {
-  .card5e {
-    display: none;
-  }
+
+.cardwrap-hov {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.cardwrap-hov:hover {
+  opacity: 1;
+}
+.cardwrap-hov .h2-card5 {
+  padding-top: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 1.735rem;
 }
 
 .card-icont {
@@ -1068,8 +1143,8 @@ body {
 }
 .card-icont .p-itxt {
   color: var(--alt-color);
-  font-weight: 700;
-  font-size: var(--small-font-size);
+  font-weight: 500;
+  font-size: var(--normal-font-size);
 }
 
 .p-card {
@@ -1317,7 +1392,6 @@ body {
   width: 100%;
   min-width: 210px;
   height: 210px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.25);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
@@ -1349,6 +1423,7 @@ body {
   min-width: 210px;
   height: 210px;
   border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 .card-wrap .card-comment .cont-cardtxt {
   display: flex;
@@ -1356,10 +1431,11 @@ body {
   justify-content: space-between;
   position: absolute;
   padding: 20px;
-  height: 200px;
+  height: 210px;
 }
 .card-wrap .card-comment .cont-cardtxt .p-commentsmall {
   font-size: 0.868rem;
+  margin-bottom: 0;
 }
 
 /** +++++++++++++++ CONTACTO.HTML +++++++++++++++ **/

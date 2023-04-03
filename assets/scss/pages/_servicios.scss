@@ -111,6 +111,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+
   .h1-card {
     color: map-get($colors, primary-color-dark);
     margin-bottom: 0px;
@@ -119,6 +120,7 @@
     font-weight: 700;
     font-size: map-get($font-size, normal-titles);
   }
+
   .p-titcard {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -137,9 +139,10 @@
     'card1'
     'card2'
     'card3'
-    'card4';
+    'card4'
+    'card5';
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 210px;
   margin-top: -50px;
   padding-top: 40px;
   justify-content: center;
@@ -199,16 +202,33 @@
 
 .card5e {
   height: 100%;
-  display: flex;
   grid-area: card5;
   background: linear-gradient(rgba(92, 66, 141, 0.8), rgba(94, 129, 148, 0.8)),
     url(https://i0.wp.com/personalit.us/wp-content/uploads/2021/02/People-Meeting-with-laptops-862x519-1-800x450.jpeg) center center / cover no-repeat;
   border-radius: 15px;
-  opacity: 0;
   animation: fadein 2s cubic-bezier(0.23, 1, 0.320, 1) 0.1s 1 forwards;
+}
 
-  @include breakp-md-max {
-    display: none;
+.cardwrap-hov {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+  .h2-card5 {
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+    font-size: map-get($font-size, normal-subtitles);
+
   }
 }
 
@@ -233,8 +253,8 @@
 
   .p-itxt {
     color: var(--alt-color);
-    font-weight: 700;
-    font-size: var(--small-font-size)
+    font-weight: 500;
+    font-size: var(--normal-font-size)
   }
 }
 
