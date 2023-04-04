@@ -1457,6 +1457,11 @@ body {
     width: 80%;
   }
 }
+@media screen and (min-width: 992px) {
+  .cont-form {
+    width: 100%;
+  }
+}
 
 .form {
   padding: 20px;
@@ -1474,7 +1479,6 @@ body {
   display: block;
   margin-top: 20px;
   color: var(--primary-color);
-  width: 100%;
 }
 .form .custom-input:focus {
   border-color: var(--primary-color-dark);
@@ -1491,6 +1495,72 @@ body {
   border: 1px solid var(--primary-color-dark);
   border-radius: 5px;
   resize: none;
+}
+.form #asunto {
+  min-height: 200px;
+  resize: vertical;
+  max-height: 300px;
+}
+.form .wrap-ccheck {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0 0;
+  width: 82%;
+}
+@media screen and (min-width: 458px) {
+  .form .wrap-ccheck {
+    width: 55%;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .form .wrap-ccheck {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .form .wrap-ccheck {
+    width: 40%;
+  }
+}
+.form .custom-check {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background-color: white;
+}
+.form .custom-check:focus {
+  border-color: var(--primary-color-dark);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(120, 9, 175, 0.2);
+}
+.form .custom-check:hover {
+  background-color: rgba(120, 9, 175, 0.2);
+}
+.form .custom-check:checked {
+  background-color: var(--primary-color);
+}
+.form .custom-check:checked::after {
+  display: block;
+}
+.form .custom-check::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 15px;
+  color: white;
+  display: none;
+}
+.form .check-label {
+  margin: 0;
+  font-size: var(--smaller-font-size);
 }
 .form input[type=submit] {
   background-color: var(--primary-color-dark);
@@ -1510,12 +1580,6 @@ body {
   background-color: var(--primary-color);
   color: var(--alt-color);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
-}
-
-#asunto {
-  min-height: 200px;
-  resize: vertical;
-  max-height: 300px;
 }
 
 @media screen and (min-width: 992px) {

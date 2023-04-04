@@ -17,6 +17,10 @@
   @include breakpoint(sm1) {
     width: 80%;
   }
+
+  @include breakpoint(lg) {
+    width: 100%;
+  }
 }
 
 .form {
@@ -36,7 +40,6 @@
     display: block;
     margin-top: 20px;
     color: var(--primary-color);
-    width: 100%;
   }
 
   .custom-input:focus {
@@ -57,9 +60,81 @@
     resize: none;
   }
 
+  #asunto {
+    min-height: 200px;
+    resize: vertical;
+    max-height: 300px;
+  }
+
   input[type='text'],
   input[type='email'] {
     @extend textarea;
+  }
+
+  .wrap-ccheck {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 0;
+    width: 82%;
+
+    @include breakpoint(sm) {
+      width: 55%;
+      justify-content: space-evenly;
+    }
+
+    @include breakpoint(xl) {
+      width: 50%;
+    }
+
+    @include breakpoint(xxl) {
+      width: 40%;
+    }
+  }
+
+  .custom-check {
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background-color: white;
+
+    &:focus {
+      border-color: var(--primary-color-dark);
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem rgba(120, 9, 175, 0.2);
+    }
+
+    &:hover {
+      background-color: rgba(120, 9, 175, 0.2);
+    }
+
+    &:checked {
+      background-color: var(--primary-color);
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &::after {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      content: "\f00c";
+      font-size: 15px;
+      color: white;
+      display: none;
+    }
+  }
+
+  .check-label {
+    margin: 0;
+    font-size: var(--smaller-font-size);
   }
 
   input[type='submit'] {
@@ -82,12 +157,6 @@
     }
   }
 
-}
-
-#asunto {
-  min-height: 200px;
-  resize: vertical;
-  max-height: 300px;
 }
 
 .g-map {

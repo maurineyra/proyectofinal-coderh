@@ -85,16 +85,18 @@
 				<div class="cont-form d-lg-flex justify-content-center align-items-center">
 					<div class="form col-12 col-lg-5">
 						<h2 class="h2-contact">Contactanos</h2>
-						<form action="#">
+						<form class="d-flex flex-column align-items-center" action="#">
 							<label for="nombre">Nombre:</label>
 							<input type="text" class="custom-input" id="nombre" name="nombre" required>
-
 							<label for="email">Email:</label>
 							<input type="email" class="custom-input" id="email" name="email" required>
-
 							<label for="asunto">Mensaje</label>
 							<textarea id="asunto" class="custom-input" name="asunto" placeholder="Dejanos tu consulta!"></textarea>
-
+							<div class="wrap-ccheck">
+								<input type="checkbox" class="custom-check" id="mycheck" name="checkbox">
+								<label class="check-label" for="mycheck">Quiero recibir promociones</label>
+							</div>
+						
 							<input type="submit" value="Enviar">
 						</form>
 					</div>
