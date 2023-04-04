@@ -1462,6 +1462,11 @@ body {
     width: 100%;
   }
 }
+@media screen and (min-width: 1440px) {
+  .cont-form {
+    width: 85%;
+  }
+}
 
 .form {
   padding: 20px;

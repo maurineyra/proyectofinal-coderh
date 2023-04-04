@@ -21,6 +21,10 @@
   @include breakpoint(lg) {
     width: 100%;
   }
+
+  @include breakpoint(xxl) {
+    width: 85%;
+  }
 }
 
 .form {
