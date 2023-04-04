@@ -15,6 +15,7 @@
 
 * Proyecto final del curso Desarrollo Web realizado en Coderhouse.
 * Parte de las animaciones corresponden a la libreria: https://michalsnik.github.io/aos/
+* Los iconos usados forman parte de FontAwesome: https://fontawesome.com/docs
 
 
 <!-- MARKDOWN LINKS -->
